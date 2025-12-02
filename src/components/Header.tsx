@@ -5,15 +5,15 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>ARCHIVO NACIONAL</h1>
-          <span>Memoria de la Nación</span>
+          <h1>Archivo Nacional</h1>
+          <small>Preservación y Acceso</small>
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#">Colecciones</a></li>
-            <li><a href="#">Investigación</a></li>
-            <li><a href="#">Visitas</a></li>
-            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Fondos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Organización</a></li>
+            <li><a href="#">Contacto</a></li>
           </ul>
         </nav>
       </div>

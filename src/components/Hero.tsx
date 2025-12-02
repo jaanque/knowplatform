@@ -4,21 +4,22 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h2>Catálogo en Línea</h2>
-        <div className="search-container">
-          <form className="search-form">
-            <input
-              type="text"
-              placeholder="Buscar por palabra clave, fondo documental o fecha..."
-              className="search-input"
-            />
-            <button type="submit" className="search-button">Buscar</button>
-          </form>
-          <div className="search-links">
-            <a href="#">Búsqueda Avanzada &rarr;</a>
-            <a href="#">Guía de Fondos &rarr;</a>
-            <a href="#">Novedades de Ingreso &rarr;</a>
-          </div>
+        <h2>Centro de Datos Históricos</h2>
+        <p>
+          Acceso público y gratuito a los documentos que conforman la memoria de la nación.
+          Consulte catálogos, registros civiles y material audiovisual.
+        </p>
+
+        <div className="search-box">
+          <input type="text" placeholder="Buscar documentos, leyes, personas..." />
+          <button>BUSCAR</button>
+        </div>
+
+        <div className="quick-links">
+          <span>Accesos rápidos:</span>
+          <a href="#">Guía de Archivos</a>
+          <a href="#">Trámites a distancia</a>
+          <a href="#">Turnos presenciales</a>
         </div>
       </div>
     </section>

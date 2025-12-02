@@ -1,97 +1,79 @@
-.collections {
-  padding: 4rem 2rem 6rem;
-  background-color: var(--bg-paper);
+.features {
+  padding: 4rem 1.5rem;
+  background-color: white;
 }
 
-.collections .container {
+.features .container {
   max-width: var(--container-width);
   margin: 0 auto;
 }
 
-.section-header {
-  margin-bottom: 3rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 1rem;
-}
-
-.section-header h3 {
+.features h3 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  border-left: 5px solid var(--color-primary);
+  padding-left: 1rem;
 }
 
-.section-header p {
-  color: var(--text-secondary);
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 1.1rem;
-}
-
-.collections-grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
-.collection-card {
-  display: block;
-  background-color: var(--bg-white);
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.collection-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  border-color: var(--accent-color);
-}
-
-.card-image-placeholder {
-  height: 160px;
-  position: relative;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.period-badge {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: var(--text-primary);
-  color: #fff;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  font-family: var(--font-body);
-  letter-spacing: 0.05em;
-}
-
-.card-content {
+.card {
+  border: 2px solid #1b1b1b;
+  border-radius: var(--radius);
   padding: 1.5rem;
+  background-color: white;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
-.collection-card h4 {
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0px rgba(0,0,0,1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: var(--text-primary);
-  border-bottom: 1px solid transparent;
-  display: inline-block;
-  transition: border-color 0.2s;
+  font-weight: 700;
+  max-width: 70%;
 }
 
-.collection-card:hover h4 {
-  border-color: var(--text-primary);
-}
-
-.collection-card p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-.card-link {
+.count {
+  background-color: #f0f0f0;
+  padding: 0.25rem 0.5rem;
   font-size: 0.85rem;
-  text-transform: uppercase;
   font-weight: 600;
-  color: var(--accent-color);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.card p {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.card-action {
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
+  align-self: flex-start;
+}
+
+.card-action:hover {
+  text-decoration: underline;
 }

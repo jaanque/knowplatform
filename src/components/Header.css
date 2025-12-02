@@ -1,82 +1,67 @@
 .header {
-  background-color: var(--bg-white);
-  border-bottom: 1px solid var(--border-color);
+  background-color: #fff;
+  border-bottom: var(--border-strong);
   height: var(--header-height);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 2rem;
-  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo h1 {
-  font-size: 1.75rem;
-  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
   margin: 0;
-  letter-spacing: -0.01em;
-  font-family: var(--font-heading);
+  line-height: 1;
 }
 
-.logo span {
-  display: block;
-  font-size: 0.75rem;
-  font-family: var(--font-body);
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-top: 2px;
+.logo small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
 }
 
 .nav ul {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav a {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-primary);
-  font-weight: 500;
-  position: relative;
-  padding-bottom: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
 }
 
 .nav a:hover {
-  color: var(--accent-color);
-}
-
-.nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--accent-color);
-  transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-  width: 100%;
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
   }
   .nav {
-    display: none;
-  }
-  .logo h1 {
-    font-size: 1.4rem;
+    display: none; /* Placeholder for mobile menu */
   }
 }

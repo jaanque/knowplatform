@@ -1,21 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  /* "Classic Institution" Palette */
-  --bg-paper: #F9F9F7; /* Warm, paper-like background */
-  --bg-white: #ffffff;
+  /* "Robust & Functional" Palette */
+  --color-primary: #005ea2; /* Strong, reliable blue (Gov style) */
+  --color-primary-dark: #1a4480;
 
-  --text-primary: #1a1a1a; /* Soft Black */
-  --text-secondary: #595959; /* Dark Grey */
+  --color-text: #1b1b1b; /* Near black for max contrast */
+  --color-text-secondary: #454545;
 
-  --accent-color: #8c734b; /* Bronze / Old Gold - Classic & Elegant */
-  --accent-dark: #6e5a3a;
+  --bg-page: #ffffff;
+  --bg-section: #f0f0f0; /* Light gray for defining areas */
 
-  --border-color: #dcdcdc;
+  --border-strong: 2px solid #1b1b1b;
+  --border-subtle: 1px solid #a9a9a9;
 
-  --font-heading: 'Georgia', 'Times New Roman', serif; /* Authority */
-  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Legibility */
+  /* Typography - "Round and Good" -> Inter */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 
-  --container-width: 1200px;
-  --header-height: 80px;
+  --container-width: 1140px;
+  --header-height: 90px;
+
+  --radius: 6px; /* Mild rounding, not fully square, not pill */
 }
 
 * {
@@ -25,27 +30,27 @@
 }
 
 body {
-  background-color: var(--bg-paper);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  line-height: 1.6;
+  background-color: var(--bg-page);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.02em; /* Tight, solid look */
 }
 
 button {
-  font-family: var(--font-body);
+  font-family: var(--font-main);
   cursor: pointer;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: var(--font-heading);
-  font-weight: 400; /* Serifs often look better with lighter weights */
-  color: var(--text-primary);
-  margin-bottom: 1rem;
 }
