@@ -47,6 +47,13 @@
 .nav ul {
   display: flex;
   gap: 0.5rem; /* Tighter gap, relying on padding */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  list-style: none;
 }
 
 .nav a {
