@@ -1,31 +1,23 @@
 :root {
-  /* Color Palette - Modern Professional Archive */
-  --primary-color: #0f172a; /* Deep Navy */
-  --secondary-color: #1e293b; /* Slate */
-  --accent-color: #d97706; /* Muted Gold/Amber */
-  --accent-hover: #b45309;
+  /* Institutional / Professional Palette */
+  --primary-color: #003366; /* Classic Navy Blue - Trustworthy */
+  --secondary-color: #4a5568; /* Neutral Dark Gray */
+  --accent-color: #b91c1c; /* Official Red for highlights/buttons */
 
-  --bg-color: #f8fafc; /* Very light cool gray */
-  --surface-color: #ffffff;
+  --bg-color: #ffffff;
+  --bg-secondary: #f3f4f6; /* Very light gray for section distinction */
 
-  --text-primary: #334155;
-  --text-secondary: #64748b;
-  --text-light: #f1f5f9;
+  --text-main: #111827; /* Nearly black */
+  --text-muted: #4b5563;
 
-  --border-color: #e2e8f0;
+  --border-color: #e5e7eb;
 
-  /* Spacing */
-  --container-width: 1280px;
-  --header-height: 80px;
+  --container-width: 1100px; /* Slightly tighter for better readability */
+  --header-height: 70px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: var(--text-primary);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text-main);
   background-color: var(--bg-color);
 }
 
@@ -39,17 +31,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
-}
-
-ul {
-  list-style: none;
 }
 
 button {
@@ -57,7 +43,8 @@ button {
   font-family: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   color: var(--primary-color);
+  font-weight: 700;
   line-height: 1.2;
 }

@@ -1,12 +1,8 @@
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  border-bottom: 2px solid var(--primary-color); /* Strong institutional line */
   height: var(--header-height);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .header-container {
@@ -15,68 +11,46 @@
   align-items: center;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   height: 100%;
 }
 
 .logo h1 {
   font-size: 1.5rem;
   color: var(--primary-color);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  text-transform: uppercase; /* Official look */
+  letter-spacing: 0.05em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-/* Optional: Add a visual indicator like a colored block or icon placeholder */
-.logo h1::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-color: var(--accent-color);
-  border-radius: 4px;
-}
-
 .nav ul {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav a {
-  font-weight: 500;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  position: relative;
-  padding: 0.5rem 0;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
 }
 
 .nav a:hover {
   color: var(--primary-color);
-}
-
-.nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color);
-  transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-  width: 100%;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 0 1.5rem;
-  }
-
-  .nav {
-    display: none; /* Mobile menu implementation would go here */
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    height: auto;
+    padding: 1rem;
   }
 }
