@@ -1,73 +1,106 @@
 .footer {
   background-color: white;
   border-top: 1px solid var(--border-color);
-  padding: 4rem 1.5rem 2rem;
+  padding: 4rem 0 2rem;
   margin-top: auto;
 }
 
-.footer .container {
-  max-width: var(--container-width);
-  margin: 0 auto;
+.footer-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
+  margin-bottom: 3rem;
 }
 
 .footer-brand {
-  max-width: 300px;
+  max-width: 280px;
 }
 
-.footer-brand h5 {
-  font-size: 1.5rem;
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.brand-header h5 {
+  font-size: 1.25rem;
   color: var(--primary-color);
+  margin: 0;
 }
 
 .footer-brand p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-.footer-links {
+.footer-links-grid {
   display: flex;
   gap: 4rem;
   flex-wrap: wrap;
 }
 
-.footer-links h6 {
-  font-size: 0.9rem;
+.link-column h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: var(--text-primary);
+  letter-spacing: 0.05em;
 }
 
-.footer-links ul {
+.link-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.footer-links li {
-  margin-bottom: 0.6rem;
+.link-column li {
   list-style: none;
 }
 
-.footer-links a {
+.link-column a {
   color: var(--text-secondary);
   font-size: 0.9rem;
+  transition: color 0.2s;
 }
 
-.footer-links a:hover {
-  color: var(--primary-color);
+.link-column a:hover {
+  color: var(--accent-color);
 }
 
 .footer-bottom {
-  max-width: var(--container-width);
-  margin: 3rem auto 0;
   padding-top: 1.5rem;
-  border-top: 1px solid #f1f3f5;
-  text-align: center;
-  color: #adb5bd;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: #94a3b8;
   font-size: 0.85rem;
+}
+
+.bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.bottom-links a:hover {
+  color: var(--primary-color);
+}
+
+.dot {
+  color: var(--border-color);
 }

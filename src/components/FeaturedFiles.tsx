@@ -1,4 +1,5 @@
 import FileIcon from './FileIcon';
+import Icons from './Icons';
 import './FeaturedFiles.css';
 
 const FeaturedFiles = () => {
@@ -18,7 +19,10 @@ const FeaturedFiles = () => {
       <div className="container">
         <div className="section-header">
           <h3>Archivos Destacados</h3>
-          <a href="#" className="view-all">Ver todos &rarr;</a>
+          <a href="#" className="view-all">
+            Ver todos
+            <Icons name="arrow-right" size={14} className="icon-arrow" />
+          </a>
         </div>
 
         <div className="files-grid">
@@ -31,11 +35,15 @@ const FeaturedFiles = () => {
                 <h4 title={file.name}>{file.name}</h4>
                 <div className="file-meta">
                   <span className="file-size">{file.size}</span>
-                  <span className="file-downloads">{file.downloads} descargas</span>
+                  <span className="file-dot">•</span>
+                  <span className="file-downloads">
+                    <Icons name="download" size={10} className="meta-icon" />
+                    {file.downloads}
+                  </span>
                 </div>
               </div>
-              <button className="btn-icon-download" title="Descargar">
-                ⬇
+              <button className="btn-icon-download" title="Descargar" aria-label="Descargar archivo">
+                <Icons name="download" size={16} />
               </button>
             </div>
           ))}
