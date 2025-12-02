@@ -1,16 +1,32 @@
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #34495e;
-  --accent-color: #c0392b; /* A bit more formal red/brown for archives */
-  --background-color: #f9f9f9;
-  --text-color: #333333;
-  --white: #ffffff;
-  --border-color: #dddddd;
+  /* Color Palette - Modern Professional Archive */
+  --primary-color: #0f172a; /* Deep Navy */
+  --secondary-color: #1e293b; /* Slate */
+  --accent-color: #d97706; /* Muted Gold/Amber */
+  --accent-hover: #b45309;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --bg-color: #f8fafc; /* Very light cool gray */
+  --surface-color: #ffffff;
+
+  --text-primary: #334155;
+  --text-secondary: #64748b;
+  --text-light: #f1f5f9;
+
+  --border-color: #e2e8f0;
+
+  /* Spacing */
+  --container-width: 1280px;
+  --header-height: 80px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: var(--text-primary);
+  background-color: var(--bg-color);
 }
 
 * {
@@ -23,12 +39,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 ul {
@@ -38,4 +55,9 @@ ul {
 button {
   cursor: pointer;
   font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  line-height: 1.2;
 }
