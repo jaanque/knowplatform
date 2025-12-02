@@ -1,56 +1,73 @@
 .footer {
-  background-color: var(--bg-secondary);
+  background-color: white;
   border-top: 1px solid var(--border-color);
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 1.5rem 2rem;
   margin-top: auto;
-  font-size: 0.9rem;
 }
 
 .footer .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 3rem;
 }
 
-.footer-col h4 {
-  color: #fff;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.footer-brand {
+  max-width: 300px;
 }
 
-.footer-col h5 {
-  color: var(--text-primary);
+.footer-brand h5 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.footer-brand p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-links h6 {
   font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
-.footer-col ul {
+.footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-col li {
-  margin-bottom: 0.8rem;
+.footer-links li {
+  margin-bottom: 0.6rem;
+  list-style: none;
 }
 
-.footer-col a {
+.footer-links a {
   color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
-.footer-col a:hover {
-  color: var(--text-accent);
+.footer-links a:hover {
+  color: var(--primary-color);
 }
 
 .footer-bottom {
   max-width: var(--container-width);
-  margin: 4rem auto 0;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f3f5;
   text-align: center;
-  color: var(--text-secondary);
+  color: #adb5bd;
+  font-size: 0.85rem;
 }

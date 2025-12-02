@@ -4,36 +4,39 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-col">
-          <h4>CodeFlow</h4>
-          <p>El IDE del futuro, hoy.</p>
+        <div className="footer-brand">
+          <h5>FileNexus</h5>
+          <p>La plataforma líder en intercambio de archivos seguros.</p>
         </div>
-        <div className="footer-col">
-          <h5>Producto</h5>
-          <ul>
-            <li><a href="#">Editor</a></li>
-            <li><a href="#">Teams</a></li>
-            <li><a href="#">Enterprise</a></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h5>Recursos</h5>
-          <ul>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Comunidad</a></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h5>Legal</h5>
-          <ul>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Términos</a></li>
-          </ul>
+        <div className="footer-links">
+          <div>
+            <h6>Explorar</h6>
+            <ul>
+              <li><a href="#">Software</a></li>
+              <li><a href="#">Música</a></li>
+              <li><a href="#">Documentos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>Comunidad</h6>
+            <ul>
+              <li><a href="#">Subir</a></li>
+              <li><a href="#">Reglas</a></li>
+              <li><a href="#">Foro</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>Legal</h6>
+            <ul>
+              <li><a href="#">DMCA</a></li>
+              <li><a href="#">Privacidad</a></li>
+              <li><a href="#">Términos</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 CodeFlow Inc.</p>
+        <p>&copy; 2024 FileNexus. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
