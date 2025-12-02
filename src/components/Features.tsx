@@ -1,26 +1,38 @@
 import './Features.css';
 
 const Features = () => {
-  const categories = [
-    { title: "Documentos Escritos", count: "1.2M", desc: "Actas, leyes y decretos." },
-    { title: "Material Fotográfico", count: "850k", desc: "Imágenes del siglo XIX y XX." },
-    { title: "Mapas y Planos", count: "45k", desc: "Cartografía urbana y rural." },
-    { title: "Audiovisual", count: "12k", desc: "Registros sonoros y fílmicos." },
+  const features = [
+    {
+      title: "Colaboración Live",
+      desc: "Edita código con tu equipo como si fuera un documento compartido. Cursores en tiempo real.",
+      icon: "⚡"
+    },
+    {
+      title: "Git Integrado",
+      desc: "Todas las operaciones de Git (commit, push, pull, branch) sin salir del navegador.",
+      icon: "🌿"
+    },
+    {
+      title: "Entorno en Nube",
+      desc: "Terminal Linux completa con acceso root. Instala cualquier dependencia.",
+      icon: "☁️"
+    },
+    {
+      title: "Extensiones",
+      desc: "Compatible con la mayoría de extensiones de VS Code. Personaliza tu flujo.",
+      icon: "🧩"
+    }
   ];
 
   return (
     <section className="features">
       <div className="container">
-        <h3>Explorar por Tipo de Material</h3>
-        <div className="grid">
-          {categories.map((cat, idx) => (
-            <div key={idx} className="card">
-              <div className="card-header">
-                <h4>{cat.title}</h4>
-                <span className="count">{cat.count}</span>
-              </div>
-              <p>{cat.desc}</p>
-              <a href="#" className="card-action">Ver Catálogo &rarr;</a>
+        <div className="features-grid">
+          {features.map((f, i) => (
+            <div key={i} className="feature-card">
+              <div className="feature-icon">{f.icon}</div>
+              <h3>{f.title}</h3>
+              <p>{f.desc}</p>
             </div>
           ))}
         </div>

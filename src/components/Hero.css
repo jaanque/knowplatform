@@ -1,107 +1,84 @@
 .hero {
-  background-color: var(--bg-section);
-  /* Subtle "Graph Paper" / Grid Pattern for a technical/archive feel */
-  background-image:
-    linear-gradient(#e5e5e5 1px, transparent 1px),
-    linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center top;
-  padding: 5rem 1.5rem;
-  border-bottom: 1px solid #dcdcdc;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #1c2128 0%, #0d1117 100%);
 }
 
 .hero-content {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(56, 139, 253, 0.1);
+  color: #58a6ff;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(56, 139, 253, 0.3);
 }
 
 .hero h2 {
   font-size: 3.5rem;
   font-weight: 800;
-  max-width: 800px;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
   font-size: 1.25rem;
-  color: var(--color-text-secondary);
-  max-width: 700px;
-  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
 }
 
-.search-box {
-  margin-top: 1rem;
-  background: white;
-  border: 2px solid #1b1b1b;
-  border-radius: var(--radius);
-  padding: 0.5rem;
+.hero-actions {
   display: flex;
-  max-width: 700px;
-  box-shadow: 4px 4px 0px rgba(0,0,0,1); /* Brutalist shadow */
+  justify-content: center;
+  gap: 1rem;
 }
 
-.search-box input {
-  flex: 1;
-  border: none;
-  font-size: 1.1rem;
-  padding: 0.8rem 1rem;
-  font-family: var(--font-main);
-  outline: none;
-  color: var(--color-text);
-}
-
-.search-box button {
-  background-color: var(--color-primary);
+.btn-primary {
+  background-color: #238636;
   color: white;
-  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
   font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0 2rem;
-  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
   transition: background-color 0.2s;
 }
 
-.search-box button:hover {
-  background-color: var(--color-primary-dark);
+.btn-secondary:hover {
+  background-color: var(--bg-tertiary);
 }
 
-.quick-links {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
+.hero-visual {
+  perspective: 1000px;
+  margin-top: 2rem;
 }
 
-.quick-links a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.quick-links a:hover {
-  background-color: #e0e0e0;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.25rem;
-  }
-  .search-box {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    box-shadow: none;
-    border: 1px solid #ccc;
-  }
-  .search-box button {
-    padding: 1rem;
-  }
-  .quick-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
+/* Optional tilt effect could be added here */

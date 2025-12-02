@@ -1,26 +1,24 @@
+import IdePreview from './IdePreview';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h2>Centro de Datos Históricos</h2>
+        <div className="hero-badge">Nuevo: Integración con GitHub Actions ✨</div>
+        <h2>Programa a la velocidad del pensamiento.</h2>
         <p>
-          Acceso público y gratuito a los documentos que conforman la memoria de la nación.
-          Consulte catálogos, registros civiles y material audiovisual.
+          Un entorno de desarrollo completo en tu navegador.
+          Colabora en tiempo real, despliega en segundos y sincroniza con Git sin configuración.
         </p>
-
-        <div className="search-box">
-          <input type="text" placeholder="Buscar documentos, leyes, personas..." />
-          <button>BUSCAR</button>
+        <div className="hero-actions">
+          <button className="btn-primary">Abrir Editor</button>
+          <button className="btn-secondary">Ver Documentación</button>
         </div>
+      </div>
 
-        <div className="quick-links">
-          <span>Accesos rápidos:</span>
-          <a href="#">Guía de Archivos</a>
-          <a href="#">Trámites a distancia</a>
-          <a href="#">Turnos presenciales</a>
-        </div>
+      <div className="hero-visual">
+        <IdePreview />
       </div>
     </section>
   );

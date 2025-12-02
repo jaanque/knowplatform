@@ -1,10 +1,8 @@
 .header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb; /* Subtle separator */
+  background-color: rgba(13, 17, 23, 0.85); /* Semi-transparent dark */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   height: var(--header-height);
-  display: flex;
-  align-items: center;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Very subtle depth */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -14,39 +12,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 .logo h1 {
-  font-size: 1.35rem; /* Slightly smaller but cleaner */
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  color: var(--color-text);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.logo small {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #6b7280; /* Neutral gray */
-  margin-top: 2px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
 .nav ul {
   display: flex;
-  gap: 0.5rem; /* Tighter gap, relying on padding */
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -57,35 +39,40 @@
 }
 
 .nav a {
-  font-size: 0.9rem;
+  color: var(--text-primary);
   font-weight: 500;
-  color: #374151; /* Dark gray, not harsh black */
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  font-size: 0.95rem;
 }
 
 .nav a:hover {
-  color: var(--color-primary);
-  background-color: #f3f4f6; /* Subtle hover background */
+  color: #ffffff;
 }
 
-.nav a.active {
-  color: var(--color-primary);
-  background-color: #eff6ff;
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-login {
+  color: var(--text-primary);
   font-weight: 600;
 }
 
+.btn-cta {
+  background-color: #238636;
+  color: #ffffff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  transition: all 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: #2ea043;
+}
+
 @media (max-width: 768px) {
-  .header-container {
-    padding: 0 1rem;
-  }
-
-  .logo h1 {
-    font-size: 1.1rem;
-  }
-
-  .nav {
-    display: none; /* In a real app, hamburger menu */
-  }
+  .nav { display: none; }
 }
