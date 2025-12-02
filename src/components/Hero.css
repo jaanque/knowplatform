@@ -1,81 +1,101 @@
 .hero {
-  background-color: var(--bg-secondary); /* Distinct section but soft */
-  padding: 6rem 1.5rem;
-  text-align: center;
+  background-color: var(--bg-paper);
+  padding: 6rem 2rem;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
 }
 
 .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
 }
 
 .hero h2 {
-  font-size: 2.75rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1rem;
+  display: inline-block;
+  width: 100%;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
-  color: var(--text-muted);
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+.search-container {
+  background-color: var(--bg-white);
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
-.search-bar {
+.search-form {
   display: flex;
-  max-width: 600px;
-  margin: 0 auto;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .search-input {
   flex-grow: 1;
-  border: 2px solid #cbd5e1;
-  padding: 1rem 1.25rem;
-  font-size: 1.1rem;
-  border-radius: 4px; /* Slight roundness, not pill */
-  color: var(--text-main);
-  background-color: white;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0; /* Sharp edges for classic look */
+  background-color: #fafafa;
 }
 
 .search-input:focus {
-  outline: none;
-  border-color: var(--primary-color);
+  outline: 1px solid var(--accent-color);
+  background-color: #fff;
 }
 
 .search-button {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--text-primary);
+  color: #fff;
   border: none;
   padding: 0 2rem;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
   transition: background-color 0.2s;
 }
 
 .search-button:hover {
-  background-color: #002244;
+  background-color: var(--accent-color);
+}
+
+.search-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.search-links a {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.search-links a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 4rem 1rem;
-  }
   .hero h2 {
     font-size: 2rem;
   }
-  .search-bar {
+  .search-form {
     flex-direction: column;
   }
   .search-button {
     padding: 1rem;
+  }
+  .search-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }

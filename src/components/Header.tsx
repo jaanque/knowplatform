@@ -3,16 +3,17 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <div className="container header-container">
+      <div className="header-container">
         <div className="logo">
-          <h1>Archivo Nacional</h1>
+          <h1>ARCHIVO NACIONAL</h1>
+          <span>Memoria de la Nación</span>
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Catálogo</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Colecciones</a></li>
+            <li><a href="#">Investigación</a></li>
+            <li><a href="#">Visitas</a></li>
+            <li><a href="#">Institucional</a></li>
           </ul>
         </nav>
       </div>

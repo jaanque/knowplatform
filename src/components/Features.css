@@ -1,74 +1,97 @@
-.features {
-  padding: 5rem 1.5rem;
-  background-color: var(--bg-color);
+.collections {
+  padding: 4rem 2rem 6rem;
+  background-color: var(--bg-paper);
 }
 
-.features .container {
+.collections .container {
   max-width: var(--container-width);
   margin: 0 auto;
 }
 
-.features h3 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--text-main);
-  margin-bottom: 4rem;
-  position: relative;
+.section-header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
 }
 
-.features h3::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: var(--accent-color);
-  margin: 1rem auto 0;
+.section-header h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.features-grid {
+.section-header p {
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.collections-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 3rem;
-  text-align: center;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.feature-card {
-  padding: 1rem;
-  /* Removed card borders/shadows for a cleaner "info" look */
+.collection-card {
+  display: block;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  /* Simple circle background if needed, but plain icon is cleaner */
+.collection-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: var(--accent-color);
 }
 
-.feature-card h4 {
+.card-image-placeholder {
+  height: 160px;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.period-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--text-primary);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.05em;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.collection-card h4 {
   font-size: 1.25rem;
-  color: var(--text-main);
   margin-bottom: 0.75rem;
-  font-weight: 700;
-}
-
-.feature-card p {
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.feature-link {
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
+  color: var(--text-primary);
+  border-bottom: 1px solid transparent;
+  display: inline-block;
   transition: border-color 0.2s;
 }
 
-.feature-link:hover {
-  border-bottom-color: var(--primary-color);
+.collection-card:hover h4 {
+  border-color: var(--text-primary);
+}
+
+.collection-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.card-link {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-color);
+  letter-spacing: 0.05em;
 }

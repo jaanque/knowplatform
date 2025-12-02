@@ -1,41 +1,57 @@
 import './Features.css';
 
 const Features = () => {
-  const features = [
+  const collections = [
     {
-      title: "Documentos",
-      description: "Acceda a actas, leyes y decretos oficiales digitalizados.",
-      icon: "📄"
+      id: "civil",
+      title: "Registro Civil",
+      period: "1880 - 1950",
+      description: "Actas de nacimiento, matrimonio y defunción. Padrones electorales históricos.",
+      color: "#e8e6df"
     },
     {
-      title: "Fotografías",
-      description: "Explore nuestra galería visual del siglo XX.",
-      icon: "📷"
+      id: "judicial",
+      title: "Poder Judicial",
+      period: "1750 - 1920",
+      description: "Expedientes sucesorios, causas criminales y protocolos notariales.",
+      color: "#dfdce8"
     },
     {
-      title: "Mapas",
-      description: "Cartografía histórica y planos de evolución urbana.",
-      icon: "🗺️"
+      id: "maps",
+      title: "Cartografía y Planos",
+      period: "Siglos XVIII - XX",
+      description: "Mapas topográficos, planos urbanos y catastrales de todo el territorio.",
+      color: "#dfe8e1"
     },
     {
-      title: "Genealogía",
-      description: "Rastree su historia familiar a través de registros civiles.",
-      icon: "🌳"
+      id: "photos",
+      title: "Archivo Fotográfico",
+      period: "1860 - Presente",
+      description: "Colección Witcomb, caras y caretas, y registros oficiales de gobierno.",
+      color: "#e8dfdf"
     }
   ];
 
   return (
-    <section className="features">
+    <section className="collections">
       <div className="container">
-        <h3>Explorar el Archivo</h3>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
-              <h4>{feature.title}</h4>
-              <p>{feature.description}</p>
-              <a href="#" className="feature-link">Ver colección &rarr;</a>
-            </div>
+        <div className="section-header">
+          <h3>Fondos Documentales</h3>
+          <p>Explore nuestras colecciones organizadas por procedencia administrativa.</p>
+        </div>
+
+        <div className="collections-grid">
+          {collections.map((col) => (
+            <a href={`#${col.id}`} key={col.id} className="collection-card">
+              <div className="card-image-placeholder" style={{backgroundColor: col.color}}>
+                <span className="period-badge">{col.period}</span>
+              </div>
+              <div className="card-content">
+                <h4>{col.title}</h4>
+                <p>{col.description}</p>
+                <span className="card-link">Consultar Fondo &rarr;</span>
+              </div>
+            </a>
           ))}
         </div>
       </div>
