@@ -1,7 +1,19 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Icons from './Icons';
 import './Hero.css';
 
 const Hero = () => {
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(); // Stop default form submit if button is clicked inside a form
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+    }
+  };
+
   return (
     <section className="hero">
       <div className="container">
@@ -17,8 +29,14 @@ const Hero = () => {
               <div className="search-icon-box">
                 <Icons name="search" size={20} color="#64748b" />
               </div>
-              <input type="text" placeholder="Ej. reporte_anual_2024.pdf" />
-              <button>
+              <input
+                type="text"
+                placeholder="Ej. reporte_anual_2024.pdf"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSearch(e as any)}
+              />
+              <button onClick={handleSearch}>
                 <span>BUSCAR</span>
                 <Icons name="arrow-right" size={16} color="white" />
               </button>

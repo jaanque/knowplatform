@@ -32,11 +32,7 @@
 }
 
 .icon-arrow {
-  transition: transform 0.2s;
-}
-
-.view-all:hover .icon-arrow {
-  transform: translateX(3px);
+  /* removed transform */
 }
 
 .files-grid {
@@ -54,14 +50,14 @@
   gap: 0.75rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
 .file-card:hover {
-  transform: translateY(-2px);
+  /* removed transform */
   box-shadow: var(--shadow-md);
   border-color: #cbd5e1;
 }
