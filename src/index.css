@@ -19,8 +19,8 @@
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Strict Container for Alignment */
-  --container-width: 1024px;
-  --header-height: 64px;
+  --container-width: 1200px;
+  --header-height: 70px; /* Slightly taller for better vertical breathing room */
 
   --radius-sm: 6px;
   --radius-md: 8px;
